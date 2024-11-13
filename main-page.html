@@ -15,8 +15,8 @@
 
   <body class="container-fluid">
     <header class="row">
-      <nav class="col navbar navbar-expand-lg bg-body-tertiary">
-        <span class="col-2 navbar-toggler border-0">
+      <nav class="col navbar navbar-expand-lg">
+        <span class="navbar-toggler border-0 flex-grow-0 flex-shrink-1">
           <button
             class="border-0"
             type="button"
@@ -30,7 +30,7 @@
           </button>
         </span>
 
-        <span class="col">
+        <span class="col-3 col-md">
           <img
             src="logo.png"
             class="navbar-brand float-start"
@@ -40,7 +40,7 @@
         </span>
 
         <div class="col collapse navbar-collapse h-100" id="navbarContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Item 1</a>
             </li>
@@ -58,257 +58,482 @@
           <span class="border-end border-danger h-4"></span>
         </div>
 
-        <div class="col d-flex justify-content-end gap-3">
-          <img src="hlavicka-lupa.svg" alt="Search icon" />
-          <img src="hlavicka-zamek.svg" alt="Lock icon" />
-        </div>
+        <span class="col navbar__icons">
+          <button class="border-0" type="button">
+            <img src="hlavicka-lupa.svg" alt="Search icon" />
+          </button>
+          <button class="border-0" type="button">
+            <img src="hlavicka-zamek.svg" alt="Lock icon" />
+          </button>
+
+          <div class="dropdown">
+            <button
+              class="border-0 dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              CZ
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">CZ</a></li>
+              <li><a class="dropdown-item" href="#">EN</a></li>
+              <li><a class="dropdown-item" href="#">DE</a></li>
+            </ul>
+          </div>
+        </span>
       </nav>
     </header>
 
-    <main class="container-fluid g-0">
-      <section class="row main-logo">
-        <span class="col d-flex justify-content-center align-items-center">
-          <img src="logo.png" alt="Freseius Kabi Fórum" />
-          <span>Vzdělávací portál pro odborníky</span>
-        </span>
-      </section>
+    <main class="row">
+      <div class="col g-0">
+        <section class="row g-0 main-logo">
+          <div class="col main-logo__content">
+            <div class="row">
+              <div class="col main-logo__img">
+                <img src="logo.png" alt="Freseius Kabi Fórum" />
+              </div>
 
-      <section class="row p-5">
-        <article class="col">
-          <a class="link">
+              <span class="col-12 col-md main-logo__text paragraph__line-right"
+                >Vzdělávací portál pro odborníky</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="row g-0 main-content__links">
+          <article class="col-6 col-lg-3">
             <img src="sova.png" alt="Vzdělávání" />
-            <span>Lorem Ipsum</span>
-          </a>
-        </article>
 
-        <article class="col">
-          <a class="link">
+            <a class="button-link text-center">Lorem Ipsum</a>
+          </article>
+
+          <article class="col-6 col-lg-3">
             <img src="sova.png" alt="Vzdělávání" />
-            <span>Lorem Ipsum</span>
-          </a>
-        </article>
 
-        <article class="col">
-          <a class="link">
+            <a class="button-link text-center">Lorem Ipsum</a>
+          </article>
+
+          <article class="col-6 col-lg-3">
             <img src="sova.png" alt="Vzdělávání" />
-            <span>Lorem Ipsum</span>
-          </a>
-        </article>
 
-        <article class="col">
-          <a class="link">
+            <a class="button-link text-center">Lorem Ipsum</a>
+          </article>
+
+          <article class="col-6 col-lg-3">
             <img src="sova.png" alt="Vzdělávání" />
-            <span>Lorem Ipsum</span>
-          </a>
-        </article>
-      </section>
 
-      <section class="row main-content">
-        <div class="main-content__title">
-          <span class="main-content__title-line"></span>
-          <h2>Lorem Ipsum</h2>
-          <span class="main-content__title-line"></span>
-        </div>
+            <a class="button-link text-center">Lorem Ipsum</a>
+          </article>
+        </section>
 
-        <article class="col-12 col-md-4 main-content__item">
-          <span class="main-content__item-img">
-            <img src="image.webp" alt="Popis" />
-          </span>
+        <section class="row g-0 main-content">
+          <div class="main-content__title">
+            <span class="main-content__title-line"></span>
+            <h2>Lorem Ipsum</h2>
+            <span class="main-content__title-line"></span>
+          </div>
 
-          <span class="main-content__item-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-            dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
-          </span>
-        </article>
+          <article class="col-6 col-md-4 main-content__item">
+            <span class="main-content__item-img">
+              <img src="image.webp" alt="Popis" />
+            </span>
 
-        <article class="col-12 col-md-4 main-content__item">
-          <span class="main-content__item-img">
-            <img src="image.webp" alt="Popis" />
-          </span>
+            <span class="main-content__item-text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
+              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
+            </span>
+          </article>
 
-          <span class="main-content__item-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-            dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
-          </span>
-        </article>
+          <article class="col-6 col-md-4 main-content__item">
+            <span class="main-content__item-img">
+              <img src="image.webp" alt="Popis" />
+            </span>
 
-        <article class="col-12 col-md-4 main-content__item">
-          <span class="main-content__item-img">
-            <img src="image.webp" alt="Popis" />
-          </span>
+            <span class="main-content__item-text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
+              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
+            </span>
+          </article>
 
-          <span class="main-content__item-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-            dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
-          </span>
-        </article>
+          <article class="col-6 col-md-4 main-content__item">
+            <span class="main-content__item-img">
+              <img src="image.webp" alt="Popis" />
+            </span>
 
-        <article class="col-12 col-md-4 main-content__item">
-          <span class="main-content__item-img">
-            <img src="image.webp" alt="Popis" />
-          </span>
+            <span class="main-content__item-text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
+              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
+            </span>
+          </article>
 
-          <span class="main-content__item-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-            dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
-          </span>
-        </article>
+          <article class="col-6 col-md-4 main-content__item">
+            <span class="main-content__item-img">
+              <img src="image.webp" alt="Popis" />
+            </span>
 
-        <article class="col-12 col-md-4 main-content__item">
-          <span class="main-content__item-img">
-            <img src="image.webp" alt="Popis" />
-          </span>
+            <span class="main-content__item-text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
+              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
+            </span>
+          </article>
 
-          <span class="main-content__item-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-            dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
-          </span>
-        </article>
+          <article class="col-6 col-md-4 main-content__item">
+            <span class="main-content__item-img">
+              <img src="image.webp" alt="Popis" />
+            </span>
 
-        <article class="col-12 col-md-4 align-content-start main-content__more">
-          <div
-            class="main-content__more-img align-items-center position-relative"
+            <span class="main-content__item-text">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
+              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
+            </span>
+          </article>
+
+          <article
+            class="col-6 col-md-4 align-content-start main-content__more"
           >
-            <img src="frame.png" alt="Popis" />
-            <span class="main-content__more-text"> Lorem ipsum </span>
-          </div>
-        </article>
-      </section>
+            <div
+              class="main-content__more-img border-left align-items-center position-relative"
+            >
+              <span class="main-content__more-text">Lorem ipsum</span>
+            </div>
+          </article>
+        </section>
 
-      <section class="row main-content">
-        <div class="main-content__title">
-          <span class="main-content__title-line"></span>
-          <h2>Lorem Ipsum</h2>
-          <span class="main-content__title-line"></span>
-        </div>
-
-        <article class="col-12 col-md-4 main-content__item">
-          <span class="main-content__item-img">
-            <img src="image.webp" alt="Popis" />
-          </span>
-
-          <span class="main-content__item-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-            dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
-          </span>
-        </article>
-
-        <article class="col-12 col-md-4 main-content__item">
-          <span class="main-content__item-img">
-            <img src="image.webp" alt="Popis" />
-          </span>
-
-          <span class="main-content__item-text">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-            dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
-          </span>
-        </article>
-      </section>
-
-      <section class="row gap-5 main-content__box align-items-center">
-        <article class="col-3 main-content__box-logo">
-          <img src="bubliny.png" alt="Popis" />
-          <span>Aktuality</span>
-        </article>
-
-        <article class="col">
-          <span>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </span>
-          <span> 23. 11. 2024 </span>
-
-          <div class="position-relative main-content__box-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor. Temporibus
-              autem quibusdam et aut officiis debitis aut rerum necessitatibus
-              saepe eveniet ut et voluptates repudiandae sint et molestiae non
-              recusandae. Integer tempor.
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor. Temporibus
-              autem quibusdam et aut officiis debitis aut rerum necessitatibus
-              saepe eveniet ut et voluptates repudiandae sint et molestiae non
-              recusandae. Integer tempor.
-            </p>
+        <section class="row g-0 main-content">
+          <div class="main-content__title">
+            <span class="main-content__title-line"></span>
+            <div>
+              <h2>Lorem Ipsum</h2>
+              <h3>Popis</h3>
+            </div>
+            <span class="main-content__title-line"></span>
           </div>
 
-          <a href="">>> Lorem impsum</a>
-        </article>
+          <article
+            class="col-6 col-md-4 align-content-start main-content__more"
+          >
+            <div
+              class="main-content__more-img border-right align-items-center position-relative"
+            >
+              <span class="main-content__more-text">Lorem ipsum</span>
+            </div>
+          </article>
 
-        <article class="col">
-          <span>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </span>
-          <span> 23. 11. 2024 </span>
+          <article class="col-6 col-md-4 main-content__item">
+            <span class="main-content__item-img position-relative">
+              <img src="image.webp" alt="Popis" />
+              <img src="play.png" class="play" alt="Play" />
+            </span>
 
-          <div class="position-relative main-content__box-content">
-            <p>
+            <span class="main-content__item-text">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor. Temporibus
-              autem quibusdam et aut officiis debitis aut rerum necessitatibus
-              saepe eveniet ut et voluptates repudiandae sint et molestiae non
-              recusandae. Integer tempor.
-            </p>
+              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
+            </span>
+          </article>
 
-            <p>
+          <article class="col-6 col-md-4 main-content__item">
+            <span class="main-content__item-img position-relative">
+              <img src="image.webp" alt="Popis" />
+              <img src="play.png" class="play" alt="Play" />
+            </span>
+
+            <span class="main-content__item-text">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor. Temporibus
-              autem quibusdam et aut officiis debitis aut rerum necessitatibus
-              saepe eveniet ut et voluptates repudiandae sint et molestiae non
-              recusandae. Integer tempor.
-            </p>
+              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
+            </span>
+          </article>
+        </section>
+
+        <section class="row g-0 gap-5 main-content__box align-items-center">
+          <article class="col-12 col-lg-3 main-content__box-logo">
+            <img src="bubliny.png" alt="Popis" />
+            <span>Aktuality</span>
+          </article>
+
+          <article class="col-12 col-lg main-content__box-item">
+            <img src="indent.png" alt="Indent" />
+            <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+            <h4>23. 11. 2024</h4>
+
+            <div
+              class="position-relative main-content__box-content paragraph__line-right"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Praesent dapibus.
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Praesent dapibus.
+              </p>
+            </div>
+
+            <a href="">Lorem impsum</a>
+          </article>
+
+          <article class="col-12 col-lg main-content__box-item">
+            <img src="indent.png" alt="Indent" />
+            <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+            <h4>23. 11. 2024</h4>
+
+            <div
+              class="position-relative main-content__box-content paragraph__line-right"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Praesent dapibus.
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Praesent dapibus.
+              </p>
+            </div>
+
+            <a href="">Lorem impsum</a>
+          </article>
+
+          <article class="col-12 col-lg main-content__box-item">
+            <img src="indent.png" alt="Indent" />
+            <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+            <h4>23. 11. 2024</h4>
+
+            <div
+              class="position-relative main-content__box-content paragraph__line-right"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Praesent dapibus.
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Praesent dapibus.
+              </p>
+            </div>
+
+            <a href="">Lorem impsum</a>
+          </article>
+        </section>
+
+        <section class="row g-0 main-content">
+          <div class="main-content__title">
+            <span class="main-content__title-line"></span>
+            <h2>Lorem Ipsum</h2>
+            <span class="main-content__title-line"></span>
           </div>
 
-          <a href="">>> Lorem impsum</a>
-        </article>
+          <form class="main-content__item disable-hover">
+            <div class="row gap-5 justify-content-center">
+              <button class="col-5 col-lg button-large">Lorem ipsum</button>
+              <button class="col-5 col-lg button-large">Lorem ipsum</button>
+              <button class="col-5 col-lg button-large">Lorem ipsum</button>
+              <button class="col-5 col-lg button-large">Lorem ipsum</button>
+            </div>
 
-        <article class="col">
-          <span>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </span>
-          <span> 23. 11. 2024 </span>
+            <div class="row search-bar align-items-center">
+              <div class="col input-group g-0">
+                <img class="input-group-text" src="lupa.png" src="Lupa" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Placeholder"
+                  aria-label="Search"
+                />
+              </div>
 
-          <div class="position-relative main-content__box-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor. Temporibus
-              autem quibusdam et aut officiis debitis aut rerum necessitatibus
-              saepe eveniet ut et voluptates repudiandae sint et molestiae non
-              recusandae. Integer tempor.
-            </p>
+              <span class="col-12 col-md-4 g-0 search-bar__button-group">
+                <button>
+                  <img src="info.png" src="Info" />
+                </button>
+                <button>
+                  <img src="kalendar.png" src="Kalendář" />
+                </button>
+                <button>
+                  <img src="globus.png" src="Globus" />
+                </button>
+                <button>
+                  <img src="reset.png" src="Reset" />
+                </button>
+              </span>
+            </div>
+          </form>
+        </section>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
-              dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor. Temporibus
-              autem quibusdam et aut officiis debitis aut rerum necessitatibus
-              saepe eveniet ut et voluptates repudiandae sint et molestiae non
-              recusandae. Integer tempor.
-            </p>
-          </div>
+        <section class="row g-0 main-content main-content-last">
+          <section class="row">
+            <article class="col-12 col-lg main-content__item-recommended">
+              <span class="main-content__item-recommended-img">
+                <img src="image.webp" alt="Popis" />
+              </span>
 
-          <a href="">>> Lorem impsum</a>
-        </article>
-      </section>
+              <div class="main-content__item-recommended-text">
+                <h3 class="font__light">Lorem Ipsum</h3>
+                <h4 class="font__black">Lorem Ipsum</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut
+                  enim ad minima veniam, quis nostrum exercitationem ullam
+                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                  consequatur?
+                </p>
 
-      <section class="row main-content">
-        <div class="main-content__title">
-          <span class="main-content__title-line"></span>
-          <h2>Lorem Ipsum</h2>
-          <span class="main-content__title-line"></span>
-        </div>
-      </section>
+                <p class="font__light text__blue">
+                  #hastag1 #hastag2 #hastag3 #hastag4 #hastag5 #hastag6
+                </p>
+              </div>
+            </article>
+
+            <article class="col-12 col-lg main-content__item-recommended">
+              <span class="main-content__item-recommended-img">
+                <img src="image.webp" alt="Popis" />
+              </span>
+
+              <div class="main-content__item-recommended-text">
+                <h3 class="font__light">Lorem Ipsum</h3>
+                <h4 class="font__black">Lorem Ipsum</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut
+                  enim ad minima veniam, quis nostrum exercitationem ullam
+                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                  consequatur?
+                </p>
+
+                <p class="font__light text__blue">
+                  #hastag1 #hastag2 #hastag3 #hastag4 #hastag5 #hastag6
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section class="row">
+            <article class="col-12 col-lg main-content__item-recommended">
+              <span class="main-content__item-recommended-img">
+                <img src="image.webp" alt="Popis" />
+              </span>
+
+              <div class="main-content__item-recommended-text">
+                <h3 class="font__light">Lorem Ipsum</h3>
+                <h4 class="font__black">Lorem Ipsum</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut
+                  enim ad minima veniam, quis nostrum exercitationem ullam
+                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                  consequatur?
+                </p>
+
+                <p class="font__light text__blue">
+                  #hastag1 #hastag2 #hastag3 #hastag4 #hastag5 #hastag6
+                </p>
+              </div>
+            </article>
+
+            <article class="col-12 col-lg main-content__item-recommended">
+              <span class="main-content__item-recommended-img">
+                <img src="image.webp" alt="Popis" />
+              </span>
+
+              <div class="main-content__item-recommended-text">
+                <h3 class="font__light">Lorem Ipsum</h3>
+                <h4 class="font__black">Lorem Ipsum</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut
+                  enim ad minima veniam, quis nostrum exercitationem ullam
+                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                  consequatur?
+                </p>
+
+                <p class="font__light text__blue">
+                  #hastag1 #hastag2 #hastag3 #hastag4 #hastag5 #hastag6
+                </p>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="row g-0 pre-footer">
+          <article class="col pre-footer__content mb-4">
+            <span class="pre-footer__img">
+              <img src="logo.png" alt="Freseius Kabi Fórum" />
+            </span>
+            <span class="pre-footer__text"
+              >Vzdělávací portál pro odborníky</span
+            >
+          </article>
+        </section>
+
+        <section class="row g-0 pre-footer">
+          <span class="col-2 text-end g-0 newsletter-text position-relative"
+            >Vaše<br />e–mailová adresa</span
+          >
+
+          <form class="col newsletter-form">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Placeholder"
+                aria-label="Search"
+              />
+              <button>Newsletter</button>
+            </div>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="row">
-      <section class="footer__top"></section>
-      <section class="footer__bottom">
-        <span class="col">Lorem ipsum</span>
-        <span>Lorem ipsum</span>
-        <span>Lorem ipsum</span>
-      </section>
+      <div class="col">
+        <section class="row footer__main">
+          <article class="col12 col-lg-3 footer__main-logo">
+            <img src="logo.png" alt="Popis" />
+          </article>
+
+          <article
+            class="col-12 col-lg-3 footer__main-text paragraph__line-right"
+          >
+            <h3>Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut enim
+              ad minima veniam, quis nostrum exercitationem ullam corporis
+              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+            </p>
+          </article>
+
+          <article
+            class="col-12 col-lg-3 footer__main-text paragraph__line-right"
+          >
+            <h3>Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut enim
+              ad minima veniam, quis nostrum exercitationem ullam corporis
+              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+            </p>
+          </article>
+
+          <article
+            class="col-12 col-lg-3 footer__main-text paragraph__line-right"
+          >
+            <h3>Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut enim
+              ad minima veniam, quis nostrum exercitationem ullam corporis
+              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+            </p>
+          </article>
+        </section>
+
+        <section class="row footer__bottom">
+          <div class="footer__bottom-content">
+            <span>Lorem ipsum</span>
+            <div class="ms-auto">
+              <span class="me-4">Lorem ipsum</span>
+              <span>Lorem ipsum</span>
+            </div>
+          </div>
+        </section>
+      </div>
     </footer>
 
     <script
