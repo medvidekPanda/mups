@@ -14,74 +14,84 @@
   </head>
 
   <body class="container-fluid">
-    <header class="row">
-      <nav class="col navbar navbar-expand-lg">
-        <span class="navbar-toggler border-0 flex-grow-0 flex-shrink-1">
-          <button
-            class="border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarContent"
-            aria-controls="navbarContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </span>
-
-        <span class="col-3 col-md">
-          <img
-            src="logo.png"
-            class="navbar-brand float-start"
-            alt="Freseius Kabi Fórum"
-            height="48"
-          />
-        </span>
-
-        <div class="col collapse navbar-collapse h-100" id="navbarContent">
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Item 1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Item 2</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Item 3</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Item 4</a>
-            </li>
-          </ul>
-
-          <span class="border-end border-danger h-4"></span>
-        </div>
-
-        <span class="col navbar__icons">
-          <button class="border-0" type="button">
-            <img src="hlavicka-lupa.svg" alt="Search icon" />
-          </button>
-          <button class="border-0" type="button">
-            <img src="hlavicka-zamek.svg" alt="Lock icon" />
-          </button>
-
-          <div class="dropdown">
+    <header class="row sticky-top">
+      <nav class="navbar navbar-expand-lg flex-basis" id="mainNav">
+        <div class="container-fluid gap-2 g-0">
+          <span class="navbar-toggler border-0 flex-grow-0 flex-shrink-1 pe-2">
             <button
-              class="border-0 dropdown-toggle"
+              class="border-0"
               type="button"
-              data-bs-toggle="dropdown"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarContent"
+              aria-controls="navbarContent"
               aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-              CZ
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">CZ</a></li>
-              <li><a class="dropdown-item" href="#">EN</a></li>
-              <li><a class="dropdown-item" href="#">DE</a></li>
+          </span>
+
+          <span class="navbar-brand flex-grow-0 m-0">
+            <img
+              src="logo.png"
+              class="navbar-brand float-start"
+              alt="Freseius Kabi Fórum"
+              height="48"
+            />
+          </span>
+
+          <span class="flex-grow-0 flex-shrink-1 order-lg-last navbar__icons">
+            <button class="border-0" type="button">
+              <img src="hlavicka-lupa.svg" alt="Search icon" />
+            </button>
+            <button class="border-0" type="button">
+              <img src="hlavicka-zamek.svg" alt="Lock icon" />
+            </button>
+
+            <div class="dropdown">
+              <button
+                class="border-0 dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                CZ
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">CZ</a></li>
+                <li><a class="dropdown-item" href="#">EN</a></li>
+                <li><a class="dropdown-item" href="#">DE</a></li>
+              </ul>
+            </div>
+          </span>
+
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul
+              class="navbar-nav mb-2 mb-lg-0 justify-content-center column-gap-5"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Item 1</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Item 2</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Item 3</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Item 4</a
+                >
+              </li>
             </ul>
           </div>
-        </span>
+        </div>
       </nav>
     </header>
 
@@ -102,29 +112,25 @@
         </section>
 
         <section class="row g-0 main-content__links">
-          <article class="col-6 col-lg-3">
+          <a href="" class="col-6 col-lg-3">
             <img src="sova.png" alt="Vzdělávání" />
+            <span class="button-link text-center">Lorem Ipsum</span>
+          </a>
 
-            <a class="button-link text-center">Lorem Ipsum</a>
-          </article>
-
-          <article class="col-6 col-lg-3">
+          <a href="" class="col-6 col-lg-3">
             <img src="sova.png" alt="Vzdělávání" />
+            <span class="button-link text-center">Lorem Ipsum</span>
+          </a>
 
-            <a class="button-link text-center">Lorem Ipsum</a>
-          </article>
-
-          <article class="col-6 col-lg-3">
+          <a href="" class="col-6 col-lg-3">
             <img src="sova.png" alt="Vzdělávání" />
+            <span class="button-link text-center">Lorem Ipsum</span>
+          </a>
 
-            <a class="button-link text-center">Lorem Ipsum</a>
-          </article>
-
-          <article class="col-6 col-lg-3">
+          <a href="" class="col-6 col-lg-3">
             <img src="sova.png" alt="Vzdělávání" />
-
-            <a class="button-link text-center">Lorem Ipsum</a>
-          </article>
+            <span class="button-link text-center">Lorem Ipsum</span>
+          </a>
         </section>
 
         <section class="row g-0 main-content">
@@ -134,7 +140,7 @@
             <span class="main-content__title-line"></span>
           </div>
 
-          <article class="col-6 col-md-4 main-content__item">
+          <a href="" class="col-6 col-md-4 main-content__item">
             <span class="main-content__item-img">
               <img src="image.webp" alt="Popis" />
             </span>
@@ -143,9 +149,9 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
               dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
             </span>
-          </article>
+          </a>
 
-          <article class="col-6 col-md-4 main-content__item">
+          <a href="" class="col-6 col-md-4 main-content__item">
             <span class="main-content__item-img">
               <img src="image.webp" alt="Popis" />
             </span>
@@ -154,9 +160,9 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
               dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
             </span>
-          </article>
+          </a>
 
-          <article class="col-6 col-md-4 main-content__item">
+          <a href="" class="col-6 col-md-4 main-content__item">
             <span class="main-content__item-img">
               <img src="image.webp" alt="Popis" />
             </span>
@@ -165,9 +171,9 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
               dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
             </span>
-          </article>
+          </a>
 
-          <article class="col-6 col-md-4 main-content__item">
+          <a href="" class="col-6 col-md-4 main-content__item">
             <span class="main-content__item-img">
               <img src="image.webp" alt="Popis" />
             </span>
@@ -176,9 +182,9 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
               dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
             </span>
-          </article>
+          </a>
 
-          <article class="col-6 col-md-4 main-content__item">
+          <a href="" class="col-6 col-md-4 main-content__item">
             <span class="main-content__item-img">
               <img src="image.webp" alt="Popis" />
             </span>
@@ -187,9 +193,10 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
               dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
             </span>
-          </article>
+          </a>
 
-          <article
+          <a
+            href=""
             class="col-6 col-md-4 align-content-start main-content__more"
           >
             <div
@@ -197,7 +204,7 @@
             >
               <span class="main-content__more-text">Lorem ipsum</span>
             </div>
-          </article>
+          </a>
         </section>
 
         <section class="row g-0 main-content">
@@ -210,7 +217,8 @@
             <span class="main-content__title-line"></span>
           </div>
 
-          <article
+          <a
+            href=""
             class="col-6 col-md-4 align-content-start main-content__more"
           >
             <div
@@ -218,9 +226,9 @@
             >
               <span class="main-content__more-text">Lorem ipsum</span>
             </div>
-          </article>
+          </a>
 
-          <article class="col-6 col-md-4 main-content__item">
+          <a href="" class="col-6 col-md-4 main-content__item">
             <span class="main-content__item-img position-relative">
               <img src="image.webp" alt="Popis" />
               <img src="play.png" class="play" alt="Play" />
@@ -230,9 +238,9 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
               dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
             </span>
-          </article>
+          </a>
 
-          <article class="col-6 col-md-4 main-content__item">
+          <a href="" class="col-6 col-md-4 main-content__item">
             <span class="main-content__item-img position-relative">
               <img src="image.webp" alt="Popis" />
               <img src="play.png" class="play" alt="Play" />
@@ -242,7 +250,7 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent
               dapibus. Nulla pulvinar eleifend sem. Aliquam id dolor.
             </span>
-          </article>
+          </a>
         </section>
 
         <section class="row g-0 gap-5 main-content__box align-items-center">
@@ -326,7 +334,7 @@
           </div>
 
           <form class="main-content__item disable-hover">
-            <div class="row gap-5 justify-content-center">
+            <div class="row gap-3 gap-lg-5 justify-content-center">
               <button class="col-5 col-lg button-large">Lorem ipsum</button>
               <button class="col-5 col-lg button-large">Lorem ipsum</button>
               <button class="col-5 col-lg button-large">Lorem ipsum</button>
@@ -363,10 +371,13 @@
         </section>
 
         <section class="row g-0 main-content main-content-last">
-          <section class="row">
+          <section class="row column-gap-2 g-0">
             <article class="col-12 col-lg main-content__item-recommended">
               <span class="main-content__item-recommended-img">
-                <img src="image.webp" alt="Popis" />
+                <img
+                  src="http://dev.freseniuskabiforum.eu/public/frontend/data/dokument/108/thumb/1727250408np-web_128x318_-dokument-108-1727250408np-web-png.png"
+                  alt="Nutriční průvodce: Vše, co potřebujete vědět pro ambulantní výživu pacientů"
+                />
               </span>
 
               <div class="main-content__item-recommended-text">
@@ -387,7 +398,10 @@
 
             <article class="col-12 col-lg main-content__item-recommended">
               <span class="main-content__item-recommended-img">
-                <img src="image.webp" alt="Popis" />
+                <img
+                  src="http://dev.freseniuskabiforum.eu/public/frontend/data/video/246/thumb/1719910299benes_128x318_-video-246-1719910299benes-jpg.jpg"
+                  alt="Neuvěřitelný příběh z nutriční praxe pod lupou"
+                />
               </span>
 
               <div class="main-content__item-recommended-text">
@@ -407,10 +421,13 @@
             </article>
           </section>
 
-          <section class="row">
+          <section class="row column-gap-2 g-0">
             <article class="col-12 col-lg main-content__item-recommended">
               <span class="main-content__item-recommended-img">
-                <img src="image.webp" alt="Popis" />
+                <img
+                  src="http://dev.freseniuskabiforum.eu/public/frontend/data/dokument/108/thumb/1727250408np-web_128x318_-dokument-108-1727250408np-web-png.png"
+                  alt="Nutriční průvodce: Vše, co potřebujete vědět pro ambulantní výživu pacientů"
+                />
               </span>
 
               <div class="main-content__item-recommended-text">
@@ -431,7 +448,10 @@
 
             <article class="col-12 col-lg main-content__item-recommended">
               <span class="main-content__item-recommended-img">
-                <img src="image.webp" alt="Popis" />
+                <img
+                  src="http://dev.freseniuskabiforum.eu/public/frontend/data/video/246/thumb/1719910299benes_128x318_-video-246-1719910299benes-jpg.jpg"
+                  alt="Neuvěřitelný příběh z nutriční praxe pod lupou"
+                />
               </span>
 
               <div class="main-content__item-recommended-text">
@@ -463,9 +483,10 @@
           </article>
         </section>
 
-        <section class="row g-0 pre-footer">
-          <span class="col-2 text-end g-0 newsletter-text position-relative"
-            >Vaše<br />e–mailová adresa</span
+        <section class="row row-gap-2 g-0 pre-footer flex-column flex-lg-row">
+          <span
+            class="col col-lg-2 text-center text-lg-end g-0 newsletter-text position-relative"
+            >Vaše<br class="d-none d-lg-block" />e–mailová adresa</span
           >
 
           <form class="col newsletter-form">
@@ -541,5 +562,24 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.getElementById("mainNav");
+
+        function checkScroll() {
+          if (window.innerWidth < 992) {
+            if (window.scrollY > 50) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+          }
+        }
+
+        window.addEventListener("scroll", checkScroll);
+        window.addEventListener("resize", checkScroll);
+      });
+    </script>
   </body>
 </html>
