@@ -19,7 +19,7 @@
         <div class="container-fluid gap-2 g-0">
           <span class="navbar-toggler border-0 flex-grow-0 flex-shrink-1 pe-2">
             <button
-              class="border-0"
+              class="btn border-0"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarContent"
@@ -40,13 +40,19 @@
             />
           </span>
 
-          <span class="flex-grow-0 flex-shrink-1 order-lg-last navbar__icons">
-            <button class="border-0" type="button">
+          <span class="flex-grow-0 flex-shrink-1 order-lg-last navbar__buttons">
+            <button
+              class="btn border-0"
+              type="button"
+              data-bs-toggle="popover"
+              data-bs-placement="bottom"
+              data-bs-content="#search-popover"
+            >
               <img src="hlavicka-lupa.svg" alt="Search icon" />
             </button>
 
             <button
-              class="border-0"
+              class="btn border-0"
               type="button"
               data-bs-toggle="popover"
               data-bs-placement="bottom"
@@ -57,7 +63,7 @@
 
             <div class="dropdown">
               <button
-                class="border-0 dropdown-toggle"
+                class="btn border-0 dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -342,10 +348,18 @@
 
           <form class="main-content__item disable-hover">
             <div class="row gap-3 gap-lg-5 justify-content-center">
-              <button class="col-5 col-lg button-large">Lorem ipsum</button>
-              <button class="col-5 col-lg button-large">Lorem ipsum</button>
-              <button class="col-5 col-lg button-large">Lorem ipsum</button>
-              <button class="col-5 col-lg button-large">Lorem ipsum</button>
+              <button class="btn col-5 col-lg btn-outline-primary large">
+                Lorem ipsum
+              </button>
+              <button class="btn col-5 col-lg btn-outline-primary large">
+                Lorem ipsum
+              </button>
+              <button class="btn col-5 col-lg btn-outline-primary large">
+                Lorem ipsum
+              </button>
+              <button class="btn col-5 col-lg btn-outline-primary large">
+                Lorem ipsum
+              </button>
             </div>
 
             <div class="row search-bar align-items-center">
@@ -360,16 +374,16 @@
               </div>
 
               <span class="col-12 col-md-4 g-0 search-bar__button-group">
-                <button>
+                <button class="btn">
                   <img src="info.png" src="Info" />
                 </button>
-                <button>
+                <button class="btn">
                   <img src="kalendar.png" src="Kalendář" />
                 </button>
-                <button>
+                <button class="btn">
                   <img src="globus.png" src="Globus" />
                 </button>
-                <button>
+                <button class="btn">
                   <img src="reset.png" src="Reset" />
                 </button>
               </span>
@@ -504,7 +518,7 @@
                 placeholder="Placeholder"
                 aria-label="Search"
               />
-              <button>Newsletter</button>
+              <button class="btn">Newsletter</button>
             </div>
           </form>
         </section>
@@ -597,6 +611,9 @@
         const popoverList = Array.from(popoverTriggerList).map(function (
           popoverTriggerEl
         ) {
+          const contentAttr = popoverTriggerEl.getAttribute("data-bs-content");
+          const isSearchPopover = contentAttr === "#search-popover";
+
           return new bootstrap.Popover(popoverTriggerEl, {
             html: true,
             sanitize: true,
@@ -627,6 +644,22 @@
                 return content;
               }
             },
+            customClass: isSearchPopover ? "search-popover-custom" : "",
+            popperConfig: function (defaultBsPopperConfig) {
+              const newBsPopperConfig = {
+                ...defaultBsPopperConfig,
+                modifiers: [
+                  ...defaultBsPopperConfig.modifiers,
+                  {
+                    name: "offset",
+                    options: {
+                      offset: [-32, 0],
+                    },
+                  },
+                ],
+              };
+              return newBsPopperConfig;
+            },
           });
         });
       });
@@ -635,28 +668,55 @@
 </html>
 
 <div id="login-popover" class="d-none">
-  <form class="container">
+  <form class="container-fluid login-popover">
     <div class="mb-3 row">
       <div class="col">
-        <label for="staticEmail" class="row">Email</label>
         <input
           class="form-control row"
           type="text"
-          id="staticEmail"
-          value="email@example.com"
+          id="userName"
+          placeholder="Uživatelské jméno"
         />
       </div>
     </div>
 
     <div class="mb-3 row">
       <div class="col">
-        <label for="inputPassword" class="row col-form-label">Password</label>
-        <input type="password" class="form-control row" id="inputPassword" />
+        <input
+          type="password"
+          class="form-control row"
+          id="password"
+          placeholder="Heslo"
+        />
       </div>
     </div>
 
     <div class="row">
-      <button type="submit" class="mb-3">Login</button>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+  </form>
+</div>
+
+<div id="search-popover" class="d-none">
+  <form class="container-fluid">
+    <div class="row search-bar align-items-center">
+      <div class="col input-group g-0">
+        <img
+          class="d-none d-lg-block input-group-text"
+          src="lupa.png"
+          src="Lupa"
+        />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Placeholder"
+          aria-label="Search"
+        />
+      </div>
+
+      <div class="flex-grow-0 flex-shrink-1 w-auto">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
     </div>
   </form>
 </div>
