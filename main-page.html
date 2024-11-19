@@ -44,7 +44,14 @@
             <button class="border-0" type="button">
               <img src="hlavicka-lupa.svg" alt="Search icon" />
             </button>
-            <button class="border-0" type="button">
+
+            <button
+              class="border-0"
+              type="button"
+              data-bs-toggle="popover"
+              data-bs-placement="bottom"
+              data-bs-content="#login-popover"
+            >
               <img src="hlavicka-zamek.svg" alt="Lock icon" />
             </button>
 
@@ -581,5 +588,75 @@
         window.addEventListener("resize", checkScroll);
       });
     </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const popoverTriggerList = document.querySelectorAll(
+          '[data-bs-toggle="popover"]'
+        );
+        const popoverList = Array.from(popoverTriggerList).map(function (
+          popoverTriggerEl
+        ) {
+          return new bootstrap.Popover(popoverTriggerEl, {
+            html: true,
+            sanitize: true,
+            allowList: {
+              ...bootstrap.Tooltip.Default.allowList,
+              form: [],
+              input: [
+                "type",
+                "class",
+                "id",
+                "value",
+                "placeholder",
+                "name",
+                "readonly",
+              ],
+              label: ["for", "class"],
+              div: ["class"],
+              button: ["type", "class"],
+              select: ["class", "id", "name"],
+              option: ["value", "selected"],
+            },
+            content: function () {
+              const content = popoverTriggerEl.getAttribute("data-bs-content");
+              if (content.startsWith("#")) {
+                const template = document.querySelector(content);
+                return template ? template.innerHTML : "";
+              } else {
+                return content;
+              }
+            },
+          });
+        });
+      });
+    </script>
   </body>
 </html>
+
+<div id="login-popover" class="d-none">
+  <form class="container">
+    <div class="mb-3 row">
+      <div class="col">
+        <label for="staticEmail" class="row">Email</label>
+        <input
+          class="form-control row"
+          type="text"
+          id="staticEmail"
+          value="email@example.com"
+        />
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <div class="col">
+        <label for="inputPassword" class="row col-form-label">Password</label>
+        <input type="password" class="form-control row" id="inputPassword" />
+      </div>
+    </div>
+
+    <div class="row">
+      <button type="submit" class="mb-3">Login</button>
+    </div>
+  </form>
+</div>
