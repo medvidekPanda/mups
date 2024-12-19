@@ -13,10 +13,9 @@
   --blue-800: #0162bd;
 
   /* Font families */
-  --font-family-black: "Avenir Black", "Avenir", "Helvetica Neue";
-  --font-family-book: "Avenir Book", "Avenir", "Helvetica Neue";
-  --font-family-light: "Avenir Light", "Avenir", "Helvetica Neue";
-  --font-family-roman: "Avenir Roman", "Avenir", "Helvetica Neue";
+  --font-family-black: "Roboto Black", "Helvetica Neue";
+  --font-family-regular: "Roboto Regular", "Helvetica Neue";
+  --font-family-light: "Roboto Light", "Helvetica Neue";
 
   /* Font sizes */
   --font-xxs: 0.5rem;
@@ -68,37 +67,6 @@
 }
 
 /* --------------------------------------------------
-   Font definitions
--------------------------------------------------- */
-@font-face {
-  font-family: "Avenir Black";
-  src: url("fonts/AvenirLTStd-Black.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir Book";
-  src: url("fonts/AvenirLTStd-Book.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir Light";
-  src: url("fonts/AvenirLTStd-Light.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir Roman";
-  src: url("fonts/AvenirLTStd-Roman.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* --------------------------------------------------
    Base styles
 -------------------------------------------------- */
 body {
@@ -117,6 +85,7 @@ a {
 h2 {
   font-family: var(--font-family-black);
   font-size: var(--font-3xl);
+  font-weight: 900;
   color: var(--blue-800);
   margin-bottom: var(--margin-xl);
 }
@@ -125,17 +94,43 @@ h3,
 h4 {
   font-family: var(--font-family-black);
   font-size: var(--font-normal);
+  font-weight: 900;
   color: var(--blue-800);
   margin-bottom: var(--margin-sm);
+}
+
+svg {
+  width: 24px;
+  height: auto;
+  color: #0065ae;
+}
+
+svg .svg-fill--bg {
+  color: #d1dcf1;
+}
+
+svg .svg-fill--text {
+  color: #0065ae;
 }
 
 /* --------------------------------------------------
    Common form controls
 -------------------------------------------------- */
+.btn svg {
+  height: 100%;
+  width: 100%;
+}
+
+.btn svg.small {
+  width: 24px;
+  height: auto;
+}
+
 .newsletter-form .form-control,
 .search-bar .form-control {
   color: var(--blue-800);
-  font-family: var(--font-family-roman);
+  font-family: var(--font-family-regular);
+  font-weight: 400;
 }
 
 .newsletter-form .form-control::placeholder,
@@ -148,6 +143,14 @@ h4 {
    Common hover effects
 -------------------------------------------------- */
 @media (hover: hover) {
+  svg:hover .svg-fill--bg {
+    color: #0065ae;
+  }
+
+  svg:hover .svg-fill--text {
+    color: #d1dcf1;
+  }
+
   .main-content__item:not(.disable-hover):hover,
   .main-content__item:not(.disable-hover)::after,
   .main-content__item-recommended:hover,
@@ -163,6 +166,7 @@ h4 {
 
   .btn:hover {
     font-family: var(--font-family-black);
+    font-weight: 900;
   }
 }
 
@@ -214,10 +218,12 @@ h4 {
 
 .font__black {
   font-family: var(--font-family-black);
+  font-weight: 900;
 }
 
 .font__light {
   font-family: var(--font-family-light);
+  font-weight: 300;
 }
 
 .paragraph__line-right {
@@ -255,8 +261,9 @@ h4 {
   --bs-navbar-toggler-padding-y: 0;
   --bs-navbar-toggler-icon-bg: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="4" x1="2" x2="22" y2="4" stroke="%230d6efd" stroke-width="2" stroke-linecap="round"/><line y1="12" x1="2" x2="22" y2="12" stroke="%230d6efd" stroke-width="2" stroke-linecap="round"/><line y1="20" x1="2" x2="22" y2="20" stroke="%230d6efd" stroke-width="2" stroke-linecap="round"/></svg>');
 
-  font-family: var(--font-family-roman);
+  font-family: var(--font-family-regular);
   font-size: var(--font-l);
+  font-weight: 400;
   padding: var(--padding-xs);
   background-color: var(--blue-300);
   transition: background-color var(--transition-duration) ease;
@@ -301,7 +308,10 @@ h4 {
    Logo section
 -------------------------------------------------- */
 .main-logo {
-  background-color: var(--blue-400);
+  background-image: url("banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: var(--padding-xxl) var(--padding-lg);
   justify-content: center;
 }
@@ -315,8 +325,9 @@ h4 {
 }
 
 .main-logo .main-logo__text {
-  font-family: var(--font-family-book);
+  font-family: var(--font-family-regular);
   font-size: var(--font-2xl);
+  font-weight: 400;
   color: var(--blue-800);
   position: relative;
   align-content: center;
@@ -337,8 +348,9 @@ h4 {
    Main content links
 -------------------------------------------------- */
 .main-content__links {
-  font-family: var(--font-family-book);
+  font-family: var(--font-family-regular);
   font-size: var(--font-2xl);
+  font-weight: 400;
 }
 
 .main-content__links a {
@@ -416,7 +428,8 @@ h4 {
 }
 
 .main-content__item-text {
-  font-family: var(--font-family-roman);
+  font-family: var(--font-family-regular);
+  font-weight: 400;
   color: var(--blue-800);
   text-align: center;
 }
@@ -460,6 +473,7 @@ h4 {
   gap: var(--gap-lg);
   font-family: var(--font-family-black);
   font-size: var(--font-3xl);
+  font-weight: 900;
   color: var(--blue-800);
 }
 
@@ -474,7 +488,8 @@ h4 {
 }
 
 .main-content__box-content {
-  font-family: var(--font-family-roman);
+  font-family: var(--font-family-regular);
+  font-weight: 400;
   color: var(--blue-800);
   padding-left: var(--padding-lg);
   position: relative;
@@ -574,8 +589,9 @@ h4 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--blue-800);
-  font-family: var(--font-family-book);
+  font-family: var(--font-family-regular);
   font-size: var(--font-l);
+  font-weight: 400;
   text-align: center;
   padding-bottom: var(--padding-sm);
 }
@@ -626,8 +642,9 @@ h4 {
 }
 
 .pre-footer .pre-footer__text {
-  font-family: var(--font-family-book);
+  font-family: var(--font-family-regular);
   font-size: var(--font-l);
+  font-weight: 400;
   color: var(--blue-800);
 }
 
@@ -661,7 +678,8 @@ footer {
   gap: var(--gap-lg);
   height: 3rem;
   background-color: var(--blue-800);
-  font-family: var(--font-family-book);
+  font-family: var(--font-family-regular);
+  font-weight: 400;
 }
 
 .footer__bottom-content {
@@ -678,7 +696,8 @@ footer {
    Forms and buttons
 -------------------------------------------------- */
 .btn {
-  font-family: var(--font-family-book);
+  font-family: var(--font-family-regular);
+  font-weight: 400;
   transition: background-color var(--transition-duration) ease;
 }
 
@@ -730,7 +749,7 @@ footer {
 .search-bar__button-group {
   display: flex;
   justify-content: space-between;
-  gap: var(--gap-lg);
+  gap: var(--gap-sm);
   padding: 0 var(--padding-xs);
 }
 
@@ -769,7 +788,8 @@ footer {
 }
 
 .newsletter-text {
-  font-family: var(--font-family-roman);
+  font-family: var(--font-family-regular);
+  font-weight: 400;
   color: var(--blue-800);
   padding-right: var(--padding-sm);
   margin-right: var(--margin-sm);
